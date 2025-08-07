@@ -2,6 +2,7 @@
 
 using namespace std;
 
+typedef pair<int, int> pii;
 typedef vector<int> vi;
 typedef vector<vector<int>> vvi;
 
