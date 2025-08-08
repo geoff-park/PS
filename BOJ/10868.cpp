@@ -1,0 +1,66 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+typedef pair<int, int> pii;
+typedef vector<int> vi;
+typedef vector<vector<int>> vvi;
+
+struct RMQ
+{
+    int n;
+    vi rangeMin;
+    RMQ(const vi &array)
+    {
+        n = array.size();
+        rangeMin.resize(n * 4);
+        init(array, 0, n - 1, 1);
+    }
+    int init(const vi &array, int left, int right, int node)
+    {
+        if (left == right)
+            return rangeMin[node] = array[left];
+        int mid = (left + right) / 2;
+        int leftMin = init(array, left, mid, node * 2);
+        int rightMin = init(array, mid + 1, right, node * 2 + 1);
+        return rangeMin[node] = min(leftMin, rightMin);
+    }
+    int query(int left, int right, int node, int nodeLeft, int nodeRight)
+    {
+        if (right < nodeLeft || nodeRight < left)
+            return INT_MAX;
+        if (left <= nodeLeft && nodeRight <= right)
+            return rangeMin[node];
+        int mid = (nodeLeft + nodeRight) / 2;
+        return min(query(left, right, node * 2, nodeLeft, mid),
+                   query(left, right, node * 2 + 1, mid + 1, nodeRight));
+    }
+    int query(int left, int right)
+    {
+        return query(left, right, 1, 0, n - 1);
+    }
+};
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
+    int N, M;
+    cin >> N >> M;
+
+    vi input(N);
+    for (int i = 0; i < N; ++i)
+        cin >> input[i];
+
+    RMQ SEGMENT_TREE(input);
+
+    for (int i = 0; i < M; ++i)
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << SEGMENT_TREE.query(a - 1, b - 1) << '\n';
+    }
+
+    return 0;
+}
