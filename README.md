@@ -1,4 +1,4 @@
-### Compile and Run with Input Redirection
+### 🪄 Compile and Run with Input Redirection
 
 ```
 g++ main.cpp && a.exe < input.txt
