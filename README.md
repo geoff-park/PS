@@ -1,3 +1,9 @@
+### Compile and Run with Input Redirection
+
+```
+g++ main.cpp && a.exe < input.txt
+```
+
 ### 📁 template
 
 #### 24. 구간 트리
