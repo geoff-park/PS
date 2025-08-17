@@ -1,4 +1,6 @@
 .vscode/
 a.out
 input.txt
+run.sh
 yo.cpp
+yo.py
