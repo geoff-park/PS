@@ -1,3 +1,5 @@
+// Reference: 알고리즘 문제 해결 전략, pp. 649-650, 653
+
 #include <bits/stdc++.h>
 
 using namespace std;
