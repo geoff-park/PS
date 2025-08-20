@@ -31,7 +31,7 @@ vector<int> kmpSearch(const string& H, const string& N) {
   int begin = 0;
   int matched = 0;
   while (begin <= n - m) {
-    if (matched <= m && H[begin + matched] == N[matched]) {
+    if (matched < m && H[begin + matched] == N[matched]) {
       ++matched;
       if (matched == m) {
         ret.push_back(begin);
