@@ -33,7 +33,7 @@ int main() {
     }
 
     // output
-    cout << "#" << test_case << " " << ans << "\n";
+    cout << '#' << test_case << ' ' << ans << '\n';
   }
   return 0;
 }
