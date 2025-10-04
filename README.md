@@ -22,6 +22,13 @@
 
 <br>
 
+**특훈**
+
+- [ ] disjoint_set_100
+- [ ] segtree_100
+
+<br>
+
 **C++ template for swea**
 
 ```cpp
