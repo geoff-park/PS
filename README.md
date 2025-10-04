@@ -6,6 +6,32 @@
 
 <br>
 
+**C++ template for swea**
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+  ios::sync_with_stdio(0);
+  cin.tie(0);
+  int T;
+  cin >> T;
+  for (int test_case = 1; test_case <= T; test_case++) {
+    // input
+
+    // main
+    int ans = 0;
+
+    // output
+    cout << '#' << test_case << ' ' << ans << '\n';
+  }
+  return 0;
+}
+```
+
+<br>
+
 **Python template for swea**
 
 ```python
