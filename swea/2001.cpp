@@ -20,8 +20,8 @@ int main() {
 
     // main
     int ans = 0;
-    for (int si = 0; si < N - M + 1; si++) {
-      for (int sj = 0; sj < N - M + 1; sj++) {
+    for (int si = 0; si <= N - M; si++) {
+      for (int sj = 0; sj <= N - M; sj++) {
         int cnt = 0;
         for (int i = si; i < si + M; i++) {
           for (int j = sj; j < sj + M; j++) {
